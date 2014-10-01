@@ -1,0 +1,110 @@
+package client;
+
+public class Client {
+	public String getClientName() {
+		return ClientName;
+	}
+
+
+	public void setClientName(String clientName) {
+		ClientName = clientName;
+	}
+	private String ID;
+	private String ClientName;
+	private String ArrivalTime;
+	private String TicketingTime;
+	private String startStation;
+	private String ArrivalStaion;
+	private String ConsumeTime;
+	private boolean HasTicket;
+	private String trainStartTime;
+	private String trainArrivalTime;
+	Client(){};
+	
+	
+	
+	public class TicketingHelper extends Thread{
+		public void run(Client client)
+		{
+			while(true)
+			{
+				ticketingForClient(client);
+			}
+		}
+		
+		
+		public void ticketingForClient(Client client)
+		{
+			int clientTicketingTime = Integer.parseInt(client.getTicketingTime());
+			try {
+				Thread.sleep(clientTicketingTime * 1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.print("Ticketing for "+ client.getClientName() +"complete");
+			client.setTicket(true);
+		}
+	}
+		
+	
+	
+
+	
+	//Getter and Setter
+	
+	@Override
+	public String toString() {
+		return "Client [ID=" + ID + ", ClientName=" + ClientName
+				+ ", ArrivalTime=" + ArrivalTime + ", TicketingTime="
+				+ TicketingTime + ", startStation=" + startStation
+				+ ", ArrivalStaion=" + ArrivalStaion + ", ConsumeTime="
+				+ ConsumeTime + ", HasTicket=" + HasTicket + "]";
+	}
+
+
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getArrivalTime() {
+		return ArrivalTime;
+	}
+	public void setArrivalTime(String arrivalTime) {
+		ArrivalTime = arrivalTime;
+	}
+	public String getTicketingTime() {
+		return TicketingTime;
+	}
+	public void setTicketingTime(String ticketingTime) {
+		TicketingTime = ticketingTime;
+	}
+	public String getStartStation() {
+		return startStation;
+	}
+	public void setStartStation(String startStation) {
+		this.startStation = startStation;
+	}
+	public String getArrivalStaion() {
+		return ArrivalStaion;
+	}
+	public void setArrivalStaion(String arrivalStaion) {
+		ArrivalStaion = arrivalStaion;
+	}
+	public String getConsumeTime() {
+		return ConsumeTime;
+	}
+	public void setConsumeTime(String consumeTime) {
+		ConsumeTime = consumeTime;
+	}
+	public boolean getTicket() {
+		return HasTicket;
+	}
+	public void setTicket(boolean ticket) {
+		HasTicket = ticket;
+	}
+	
+	
+	
+}

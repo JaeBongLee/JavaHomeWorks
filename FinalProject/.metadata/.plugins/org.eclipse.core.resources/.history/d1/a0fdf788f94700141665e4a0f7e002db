@@ -1,0 +1,46 @@
+package thread;
+
+import java.util.Queue;
+
+import station.Station;
+import client.Client;
+
+public class TrainThread extends Thread{
+	public Queue<Client> platformQueue;
+	private int trainStartTime = 0;
+	private Station station;
+	
+	public TrainThread(Station station)
+	{
+		this.station = station;
+		this.platformQueue = station.platformQueue;
+	}
+	
+	public void trainStart()
+	{
+		while(!platformQueue.isEmpty())
+		{
+			Client inTrainClient = platformQueue.poll();
+			inTrainClient.setTrainStartTime(""+trainStartTime);
+			inTrainClient.setTrainArrivalTime(""+ (station.goingTo(inTrainClient.getArrivalStaion()) + trainStartTime));
+			inTrainClient.setConsumeTime(""+ (Integer.parseInt(inTrainClient.getTrainArrivalTime()) - (Integer.parseInt(inTrainClient.getArrivalTime()) + station.goingTo(inTrainClient.getArrivalStaion()))));
+		}
+		
+		trainStartTime += 3;
+		
+	}
+	
+	public void run()
+	{
+		while(true)
+		{
+			try{
+				trainStart();
+				Thread.sleep(3000);
+			}catch(Exception e){};
+		}
+	}
+	
+	
+	
+}

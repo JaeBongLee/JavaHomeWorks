@@ -1,0 +1,16 @@
+package station;
+
+import java.util.LinkedList;
+
+import client.Client;
+
+public class GwangjuStation extends Station implements AlgorithmPolicy{
+	public GwangjuStation(){                                                                                                                                                                                                                                                 
+		this.stationName = "Gwangju";
+		this.platformQueue = new LinkedList<Client>();
+		this.waitTicketingQueue = new LinkedList<Client>();
+	}
+	
+	
+}
+

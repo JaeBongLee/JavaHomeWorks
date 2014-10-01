@@ -1,0 +1,11 @@
+package station;
+
+public class SeoulStation extends Station implements AlgorithmPolicy{
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

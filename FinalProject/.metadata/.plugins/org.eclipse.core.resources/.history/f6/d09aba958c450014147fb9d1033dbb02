@@ -1,0 +1,8 @@
+package station;
+
+public class SeoulStation extends Station implements AlgorithmPolicy{
+	public SeoulStation(){
+		this.stationName = "Seoul";
+	}
+
+}

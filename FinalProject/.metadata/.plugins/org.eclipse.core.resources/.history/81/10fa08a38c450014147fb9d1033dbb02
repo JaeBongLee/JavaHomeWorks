@@ -1,0 +1,11 @@
+package station;
+
+import java.util.LinkedList;
+
+public class SeoulStation extends Station implements AlgorithmPolicy{
+	public SeoulStation(){
+		this.stationName = "Seoul";
+		static this.platformQueue = new LinkedList();
+	}
+
+}

@@ -1,0 +1,18 @@
+package station;
+
+import java.util.Queue;
+
+import thread.TicketingHelper;
+import client.Client;
+
+public abstract class Station {
+	public String stationName;
+	public Queue<Client> platformQueue;
+	public Queue<Client> waitTicketingQueue;
+	
+	public ticketingStart()
+	{
+		
+	}
+	
+}

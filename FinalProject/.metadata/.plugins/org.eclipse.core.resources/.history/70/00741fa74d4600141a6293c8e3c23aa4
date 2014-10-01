@@ -1,0 +1,17 @@
+package thread;
+import define.Define;
+public class Time extends Thread{
+	int count = 0 ; 
+	public void run()
+	{
+		while(true)
+		{
+			System.out.println("Now Time :" + count++ + "Minute");
+			try {
+				Thread.sleep(MINUTE);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

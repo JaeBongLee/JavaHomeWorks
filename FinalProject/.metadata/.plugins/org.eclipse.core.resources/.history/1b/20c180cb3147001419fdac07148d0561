@@ -1,0 +1,17 @@
+package thread;
+
+import station.Station;
+
+public class testThread extends Thread{
+	public testThread(Station station){
+		
+	}
+	
+	public void run()
+	{
+		while(true)
+		{
+			
+		}
+	}
+}

@@ -1,0 +1,68 @@
+package client;
+
+public class Client {
+	private String ID;
+	private String ArrivalTime;
+	private String TicketingTime;
+	private String startStation;
+	private String ArrivalStaion;
+	private String ConsumeTime;
+	private int Ticket;
+	
+	Client(){};
+	
+	
+	//Getter and Setter
+	
+	public Client(String string, String string2, String string3,
+			String string4, String string5, String string6) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	public String getArrivalTime() {
+		return ArrivalTime;
+	}
+	public void setArrivalTime(String arrivalTime) {
+		ArrivalTime = arrivalTime;
+	}
+	public String getTicketingTime() {
+		return TicketingTime;
+	}
+	public void setTicketingTime(String ticketingTime) {
+		TicketingTime = ticketingTime;
+	}
+	public String getStartStation() {
+		return startStation;
+	}
+	public void setStartStation(String startStation) {
+		this.startStation = startStation;
+	}
+	public String getArrivalStaion() {
+		return ArrivalStaion;
+	}
+	public void setArrivalStaion(String arrivalStaion) {
+		ArrivalStaion = arrivalStaion;
+	}
+	public String getConsumeTime() {
+		return ConsumeTime;
+	}
+	public void setConsumeTime(String consumeTime) {
+		ConsumeTime = consumeTime;
+	}
+	public int getTicket() {
+		return Ticket;
+	}
+	public void setTicket(int ticket) {
+		Ticket = ticket;
+	}
+	
+	
+	
+}

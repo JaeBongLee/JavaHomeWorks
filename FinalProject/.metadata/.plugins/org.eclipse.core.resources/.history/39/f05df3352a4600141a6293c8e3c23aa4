@@ -1,0 +1,14 @@
+package station;
+
+public class TicketingHelper extends Thread{
+	public void run()
+	{
+		
+	}
+	
+	
+	public void ticketingForClient(Client client)
+	{
+		
+	}
+}

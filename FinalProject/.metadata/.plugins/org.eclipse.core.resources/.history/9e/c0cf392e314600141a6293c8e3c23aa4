@@ -1,0 +1,19 @@
+package thread;
+
+public class Time extends Thread{
+	int count = 0 ; 
+	public void run()
+	{
+		while(true)
+		{
+			
+			System.out.println("Now Time :" + count++);
+			try {
+				Thread.sleep(1000);
+				count++;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

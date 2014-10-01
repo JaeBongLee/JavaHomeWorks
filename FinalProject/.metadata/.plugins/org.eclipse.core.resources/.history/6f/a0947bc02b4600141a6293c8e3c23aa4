@@ -1,0 +1,23 @@
+package station;
+
+import client.Client;
+
+public class TicketingHelper extends Thread{
+	public void run(Client client)
+	{
+		
+	}
+	
+	
+	public void ticketingForClient(Client client)
+	{
+		int clientTicketingTime = Integer.parseInt(client.getTicketingTime());
+		try {
+			Thread.sleep(clientTicketingTime * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		client.setTicket(true);
+	}
+}

@@ -1,0 +1,15 @@
+package station;
+
+import java.util.LinkedList;
+
+import client.Client;
+
+public class DaejeonStation extends Station implements AlgorithmPolicy{
+	public DaejeonStation(){                                                                                                                                                                                                                                                 
+		this.stationName = "Daejeon";
+		this.platformQueue = new LinkedList<Client>();
+		this.waitTicketingQueue = new LinkedList<Client>();
+	}
+	
+	
+}

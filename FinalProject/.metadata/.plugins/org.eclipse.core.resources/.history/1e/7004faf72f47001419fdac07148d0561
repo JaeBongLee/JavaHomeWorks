@@ -1,0 +1,31 @@
+package station;
+
+import java.util.Queue;
+
+import thread.TicketingHelper;
+import client.Client;
+
+public abstract class Station {
+	public String stationName;
+	public Queue<Client> platformQueue;
+	public Queue<Client> waitTicketingQueue;
+	TicketingHelper ticketingHelper1 = new TicketingHelper();
+	TicketingHelper ticketingHelper2 = new TicketingHelper();
+	TicketingHelper ticketingHelper3 = new TicketingHelper();
+	
+	public void ticketingStart()
+	{
+		if(!ticketingHelper1.getNowTicketing())
+		{
+			ticketingHelper1.newClient(waitTicketingQueue.poll());
+			Thread th1 = new Thread();
+		}
+		
+		if(!ticketingHelper2.getNowTicketing())
+		{
+			
+		}
+		
+	}
+	
+}

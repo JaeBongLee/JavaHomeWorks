@@ -1,0 +1,23 @@
+package station;
+
+import java.util.LinkedList;
+
+import client.Client;
+
+public class AsanStation extends Station implements AlgorithmPolicy{
+	public AsanStation(){                                                                                                                                                                                                                                                 
+		this.stationName = "Asan";
+		this.platformQueue = new LinkedList<Client>();
+		this.waitTicketingQueue = new LinkedList<Client>();
+	}
+
+	@Override
+	public void goingTo(String stationName) {
+		if(station.stationName == "Daejeon")
+		{
+			
+		}
+	}
+	
+	
+}

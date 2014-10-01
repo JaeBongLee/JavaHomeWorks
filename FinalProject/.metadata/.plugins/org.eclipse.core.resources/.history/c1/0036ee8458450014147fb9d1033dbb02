@@ -1,0 +1,7 @@
+package station;
+
+public class ChuncheonStation extends Station implements AlgorithmPolicy{
+	public ChuncheonStation(){
+		this.stationName = "Seoul";
+	}
+}

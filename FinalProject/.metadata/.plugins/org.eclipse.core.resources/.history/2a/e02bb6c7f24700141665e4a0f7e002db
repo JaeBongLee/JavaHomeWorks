@@ -1,0 +1,45 @@
+package thread;
+
+import java.util.Iterator;
+import java.util.Queue;
+
+import station.Station;
+import client.Client;
+
+public class TrainThread extends Thread{
+	public Queue<Client> platformQueue;
+	private int trainStartTime = 0;
+	
+	public TrainThread(Station station)
+	{
+		this.platformQueue = station.platformQueue;
+	}
+	
+	public void trainStart()
+	{
+		Iterator<Client> itr = platformQueue.iterator();
+		
+		while(itr.hasNext())
+		{
+			Client inTrainClient = itr.next();
+			itr.next().setTrainStartTime(""+trainStartTime);
+			
+		}
+		trainStartTime += 3;
+		
+	}
+	
+	public void run()
+	{
+		while(true)
+		{
+			try{
+				trainStart();
+				Thread.sleep(3000);
+			}catch(Exception e){};
+		}
+	}
+	
+	
+	
+}

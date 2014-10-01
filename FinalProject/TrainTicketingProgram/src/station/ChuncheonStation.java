@@ -1,0 +1,45 @@
+package station;
+
+import java.util.LinkedList;
+
+import client.Client;
+
+public class ChuncheonStation extends Station implements AlgorithmPolicy{
+	public ChuncheonStation(){                                                                                                                                                                                                                                                 
+		this.stationName = "Chuncheon";
+		this.platformQueue = new LinkedList<Client>();
+		this.waitTicketingQueue = new LinkedList<Client>();
+	}
+	
+public int goingTo(String stationName) {
+		
+		if (stationName.equals("Asan"))
+		{
+			return 36;
+		}
+		else if(stationName.equals("Daejeon"))
+		{
+			return 45;
+		}
+		else if(stationName.equals("Gwangju"))
+		{
+			return 49;
+		}
+		else if (stationName.equals("Gyeongju"))
+		{
+			return 31;
+		}
+		else if (stationName.equals("Seoul"))
+		{
+			return 16;
+		}
+		else if (stationName.equals("Wonju"))
+		{
+			return 28;
+		}
+		else 
+			return 0;
+	}
+	
+	
+}

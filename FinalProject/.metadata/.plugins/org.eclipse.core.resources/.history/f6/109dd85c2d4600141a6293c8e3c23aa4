@@ -1,0 +1,8 @@
+package thread;
+
+public class Time extends Thread{
+	public void run()
+	{
+		
+	}
+}

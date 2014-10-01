@@ -1,0 +1,9 @@
+package client;
+
+public class Client {
+	private String ID;
+	private String ArrivalTime;
+	private String TicketingTime;
+	private String startStation;
+	private String ArrivalStaion;
+}

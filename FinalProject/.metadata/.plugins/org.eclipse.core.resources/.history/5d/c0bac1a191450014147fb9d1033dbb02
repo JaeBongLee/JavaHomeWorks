@@ -1,0 +1,11 @@
+package station;
+
+import java.util.LinkedList;
+
+public class ChuncheonStation extends Station implements AlgorithmPolicy{
+	public ChuncheonStation(){
+		this.stationName = "Chuncheon";
+		this.platformQueue = new LinkedList();
+		this.waitTicketingQueue = new LinkedList();
+	}
+}
